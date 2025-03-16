@@ -1,3 +1,5 @@
+<% if session["user_id"] != nil%>
+
 <h1>New Place</h1>
 
 <form action="/places" method="post">
@@ -8,3 +10,6 @@
 
   <button>Save</button>
 </form>
+<% else %>
+  <p>You have to be logged in to create a new place</p>
+<% end %>
